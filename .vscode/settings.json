@@ -1,0 +1,12 @@
+{
+    "dart.sdkPath": ".fvm/flutter_sdk/bin/cache/dart-sdk/bin",
+    // "dart.sdkPath": ".fvm/flutter_sdk/bin",
+    // Remove .fvm files from search
+    "search.exclude": {
+        "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+        "**/.fvm": true
+    }
+}
