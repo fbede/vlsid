@@ -19,8 +19,10 @@ linter:
   rules:
     always_specify_types: false
     always_use_package_imports: false
-    avoid_final_parameters: false
     prefer_double_quotes: false
+    prefer_final_parameters: false
+    sort_constructors_first: false
+    type_annotate_public_apis: false
     unnecessary_final: false
 
     
