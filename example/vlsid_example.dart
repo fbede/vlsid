@@ -1,14 +1,15 @@
-import 'dart:math';
-
-import 'package:vlsid/src/encoder.dart';
 import 'package:vlsid/vlsid.dart';
 
-void main() async {
-  final gen = Vlsid(15);
+void main() {
+  // Create a factory for 15 character ids
+  const vlsid = Vlsid(15);
 
-  for (var i = 0; i < 100; i++) {
-    await Future.delayed(Duration(milliseconds: 100));
-    print(i);
-    print(gen.nextId());
-  }
+  // Generate an id from the factory
+  final id1 = vlsid.nextId();
+
+  // Both can be done in one line
+  final id2 = const Vlsid(15).nextId();
+
+  print(id1); //_MorKCLMA7VOQWy
+  print(id2); //_MorKCLVDBFTbQM
 }

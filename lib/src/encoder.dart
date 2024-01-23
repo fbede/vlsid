@@ -1,20 +1,18 @@
 import 'dart:convert';
 
-/// Base64 characters used for generating the ids.
-const encodingAlphabets =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+import 'characters.dart';
 
 ///Converts the timestamp to string representation
 class TimeEncoder extends Converter<int, String> {
   @override
   String convert(input) => _padNumbers(_generateNumbers(input))
       .reversed
-      .map((e) => encodingAlphabets[e])
+      .map((e) => encodingCharacters[e])
       .join();
 
   List<int> _generateNumbers(int input) {
-    final remainder = input % 64;
-    final result = (input / 64).floor();
+    final remainder = input % encodingCharacters.length;
+    final result = (input / encodingCharacters.length).floor();
 
     if (result > 0) {
       return [remainder, ..._generateNumbers(result)];

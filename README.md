@@ -1,4 +1,4 @@
-# vlsid
+# Variable Length Sortable ID (VLSID)
 This is a variable length sortable id generator.
 
 <!-- 
