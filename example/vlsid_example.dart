@@ -1,3 +1,4 @@
+import 'package:vlsid/src/characters.dart';
 import 'package:vlsid/vlsid.dart';
 
 void main() {
@@ -12,4 +13,6 @@ void main() {
 
   print(id1); //_MorKCLMA7VOQWy
   print(id2); //_MorKCLVDBFTbQM
+
+  print(encodingCharacters);
 }
