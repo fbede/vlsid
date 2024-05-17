@@ -1,0 +1,11 @@
+{
+    "dart.sdkPath": "~/Documents/3.Resources/FVM/versions/3.19.6/bin/cache/dart-sdk",
+    // Remove .fvm files from search
+    "search.exclude": {
+        "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+        "**/.fvm": true
+    }
+}
