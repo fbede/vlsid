@@ -10,7 +10,7 @@ sortable Ids of any length.
 ## Usage
 
 ```dart
-// Create a factory for 15 character ids
+// Create a factory for ids
 final vlsid = Vlsid();
 
 // Generate an id from the factory

@@ -1,7 +1,7 @@
 import 'package:vlsid/vlsid.dart';
 
 void main() {
-  // Create a factory for 15 character ids
+  // Create a factory for ids
   final vlsid = Vlsid();
 
   // Generate an id from the factory
