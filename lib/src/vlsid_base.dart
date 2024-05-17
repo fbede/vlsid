@@ -8,15 +8,10 @@ class Vlsid {
   /// Create your generator class with your prefered length.
   Vlsid({
     int length = 15,
-    DateTime? origin,
     this.characterSet = CharacterSet.allCharacters,
   }) {
     _validateIdLength(length);
-    _assignOriginTimestamp(origin);
   }
-
-  /// Date to use as epoch.
-  late final int origin;
 
   /// ID's length.
   late final int length;
@@ -28,7 +23,7 @@ class Vlsid {
   Random get _random => Random.secure();
 
   String get _encodedTimestamp =>
-      _encoder.convert(DateTime.now().millisecondsSinceEpoch - origin);
+      _encoder.convert(DateTime.now().millisecondsSinceEpoch);
 
   String get _randomString => List.generate(
         length - 7,
@@ -45,11 +40,5 @@ class Vlsid {
     } else {
       this.length = length;
     }
-  }
-
-  void _assignOriginTimestamp(DateTime? origin) {
-    origin == null
-        ? this.origin = DateTime(1970).millisecondsSinceEpoch
-        : this.origin = origin.millisecondsSinceEpoch;
   }
 }
