@@ -1,5 +1,5 @@
 name: vlsid
-description: A starting point for Dart libraries or applications.
+description: This is a variable length sortable id generator.
 version: 1.0.0
 homepage: https://github.com/fbede/vlsid
 environment:
