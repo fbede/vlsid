@@ -2,6 +2,14 @@
 This is a variable length sortable id generator. It is designed to generate 
 sortable Ids of any length.
 
+## Motivation
+I have an app under development that uses [Pocketbase](https://pocketbase.io)
+and sortable ids. Unforetunately, pocketbase only supports 15 character ids
+[#246](https://github.com/pocketbase/pocketbase/issues/246#issuecomment-1211740527)
+and I do not know of any sortable id generators that would generate exactly 15
+characters. This package solves that problem. You can now generate sortable ids
+of any length provided (length >= 8).
+
 ## Features
 - Generate sortable string ids.
 - Ids can be anylength (minimum of 8 characters).
@@ -25,5 +33,5 @@ print(id2); //_MorKCLVDBFTbQM
 
 ## Additional information
 
-I created this package to generate sortable Ids at different length. Reach out
-to me on github if you experience any bugs.
+Submit an issue on [github](https://github.com/fbede/vlsid) if you experience
+any bugs.

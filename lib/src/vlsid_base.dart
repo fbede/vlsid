@@ -25,14 +25,17 @@ class Vlsid {
   String get _encodedTimestamp =>
       _encoder.convert(DateTime.now().millisecondsSinceEpoch);
 
-  String get _randomString => List.generate(
-        length - 7,
+  String _randomString(int timestampLength) => List.generate(
+        length - timestampLength,
         (_) => characterSet
             .characters[_random.nextInt(characterSet.characters.length)],
       ).join();
 
   ///Generates the next Id
-  String nextId() => [_encodedTimestamp, _randomString].join();
+  String nextId() => [
+        _encodedTimestamp,
+        _randomString(_encodedTimestamp.length),
+      ].join();
 
   void _validateIdLength(int length) {
     if (length < 8) {
