@@ -13,7 +13,19 @@ of any length provided (length >= 8).
 ## Note
 _A bug was discovered in v1.0.0 where the length of the id was 1 character 
 longer than the length specified in the constructor. This has been fixed in
-this version._
+this version. So to continue generating the same length of ids subtract the
+initial length by 1._
+
+```dart
+// v1.0.0
+final vlsid1 = Vlsid(length: 15);
+final id1 = vlsid1.nextId().length; // 16
+
+// v2.0.0
+final vlsid2 = Vlsid(length: 15);
+final id2 = vlsid2.nextId().length; // 15
+
+```
 
 ## Features
 - Generate sortable string ids.
