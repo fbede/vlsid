@@ -13,8 +13,9 @@ of any length provided (length >= 8).
 ## Note
 _A bug was discovered in v1.0.0 where the length of the id was 1 character 
 longer than the length specified in the constructor. This has been fixed in
-this version. So to continue generating the same length of ids subtract the
-initial length by 1._
+this version. So to continue generating the same length of ids you were using
+in v1.x.x subtract the length you used then by 1. If you did not specify a 
+length in the constructor, the default length is 15._
 
 ```dart
 // v1.0.0
