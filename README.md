@@ -10,6 +10,11 @@ and I do not know of any sortable id generators that would generate exactly 15
 characters. This package solves that problem. You can now generate sortable ids
 of any length provided (length >= 8).
 
+## Note
+_A bug was discovered in v1.0.0 where the length of the id was 1 character 
+longer than the length specified in the constructor. This has been fixed in
+this version._
+
 ## Features
 - Generate sortable string ids.
 - Ids can be anylength (minimum of 8 characters).
