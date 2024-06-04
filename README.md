@@ -30,7 +30,7 @@ final id2 = vlsid2.nextId().length; // 15
 
 ## Features
 - Generate sortable string ids.
-- Ids can be anylength (minimum of 8 characters).
+- Ids can be any length (minimum of 8 characters).
 - Uses base64url characters, so ids are url safe.
 
 ## Usage
